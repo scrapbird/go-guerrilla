@@ -165,7 +165,7 @@ func newLogrus(o OutputOption, level string) (*log.Logger, error) {
 
 	logger := &log.Logger{
 		Out:       out,
-		Formatter: new(log.TextFormatter),
+		Formatter: new(log.JSONFormatter),
 		Hooks:     make(log.LevelHooks),
 		Level:     logLevel,
 	}
@@ -176,6 +176,10 @@ func newLogrus(o OutputOption, level string) (*log.Logger, error) {
 // AddHook adds a new logrus hook
 func (l *HookedLogger) AddHook(h log.Hook) {
 	log.AddHook(h)
+}
+
+func (l *HookedLogger) IsDebug() bool {
+	return l.GetLevel() == log.DebugLevel.String()
 }
 
 func (l *HookedLogger) IsDebug() bool {
