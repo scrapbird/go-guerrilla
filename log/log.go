@@ -182,10 +182,6 @@ func (l *HookedLogger) IsDebug() bool {
 	return l.GetLevel() == log.DebugLevel.String()
 }
 
-func (l *HookedLogger) IsDebug() bool {
-	return l.GetLevel() == log.DebugLevel.String()
-}
-
 // SetLevel sets a log level, one of the LogLevels
 func (l *HookedLogger) SetLevel(level string) {
 	var logLevel log.Level
