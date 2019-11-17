@@ -1,4 +1,4 @@
-NOTE: This is not mind, I just forked it and changed the log formatter to json to match the rest of my project and did a find and replace to fix import paths.
+NOTE: This is not mine, I just forked it and changed the log formatter to json to match the rest of my project and did a find and replace to fix import paths.
 Most likely you will want to go to the original repo instead of this: github.com/flashmob/go-guerrilla
 
 
